@@ -1,7 +1,5 @@
 const API_KEY = "AIzaSyAVPuNzgLBCXxWphoNQlRMjjErFDYyhA8o";
-var instructions = "instructions='Act like you are an AI for WMC (Western Michigan Christian).';backgroundinfo='Laken is a guy who coded and trained you. WMC is located in Muskegon, MI. Next WMC bell rings in"
-var instructions1 = " (hours:minutes:seconds format)';"
-var instructions2 = "prompt='"
+var instructions = "instructions='Act like you are an AI for WMC (Western Michigan Christian).';backgroundinfo='Laken is a guy who coded and trained you. WMC is located in Muskegon, MI.';"
 var prevresponsetable = [" "]
 var timeuntilnextbell = "0:0:0"
 
@@ -52,7 +50,7 @@ document.getElementById("text-input").addEventListener("keydown", function(event
             body: JSON.stringify({
                 contents: [{
                 parts: [{
-                    text: (instructions+timeuntilnextbell+instructions1+"lastResponse='"+prevresponsetable[0]+"';"+instructions2+inputtext)+"';"
+                    text: (instructions+"timeUntilNextBell='"+timeuntilnextbell+"';"+"lastResponse='"+prevresponsetable[0]+"';prompt='"+inputtext)+"';"
                 }]
                 }]
             })
