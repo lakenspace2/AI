@@ -48,7 +48,7 @@ document.getElementById("text-input").addEventListener("keydown", function(event
             body: JSON.stringify({
                 contents: [{
                 parts: [{
-                    text: (instructions+"lastResponse='"+prevresponsetable[0]+"';prompt='"+inputtext)+"';"
+                    text: (instructions+"lastResponse='"+prevresponsetable[0]+"';prompt='"+inputtext+"';")
                 }]
                 }]
             })
