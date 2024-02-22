@@ -1,8 +1,8 @@
 const API_KEY = "AIzaSyAVPuNzgLBCXxWphoNQlRMjjErFDYyhA8o";
-var instructions = "instructions='Act like you are an AI for WMC (Western Michigan Christian).';backgroundinfo='Laken is a guy who coded and trained you. WMC is located in Muskegon, MI.';"
-var prevresponsetable = [" "," "," "]
+var instructions = "instructions='Act like you are an AI for WMC (Western Michigan Christian).';backgroundinfo='Laken is a guy who coded and trained you. WMC is located in Muskegon, MI.';";
+var prevresponsetable = [];
 
-let TranslatedbellTimes = [28800,31920,32160,35040,35280,38160,38400,39780,40020,41520,41760,42900,43140,44640,44880,47760,48000,50880,51120,54000,115200]
+let TranslatedbellTimes = [28800,31920,32160,35040,35280,38160,38400,39780,40020,41520,41760,42900,43140,44640,44880,47760,48000,50880,51120,54000,115200];
 let timer = document.getElementById("timer")
 var interval = setInterval(functi
     let d = new Date
@@ -19,7 +19,7 @@ var interval = setInterval(functi
     let h_1 = difference/86400
     let m_2 = difference/3600
     let s_3 = difference/60
-    timer.innerText = toString(("0" + (Math.floor((h_1%1)*24))).slice(-2)+":"+("0" + Math.floor((m_2%1)*60)).slice(-2)+":"+("0" + Math.floor((s_3%1)*60)).slice(-2))
+    timer.innerText = (("0" + (Math.floor((h_1%1)*24))).slice(-2)+":"+("0" + Math.floor((m_2%1)*60)).slice(-2)+":"+("0" + Math.floor((s_3%1)*60)).slice(-2))
 }, 500);
 
 function appendData(textfromai) {
