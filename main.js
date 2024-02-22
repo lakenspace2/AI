@@ -1,11 +1,13 @@
 const API_KEY = "AIzaSyAVPuNzgLBCXxWphoNQlRMjjErFDYyhA8o";
-var instructions = "instructions='Act like you are an AI for WMC (Western Michigan Christian). Laken: he is senior from that school made and trained you.';"
+var instructions = "instructions='Act like you are an AI for WMC (Western Michigan Christian).';backgroundinfo='Laken is a guy who coded and trained you. WMC is located in Muskegon, MI. Next WMC bell rings in"
+var instructions1 = " (hours:minutes:seconds format)';"
 var instructions2 = "prompt='"
 var prevresponsetable = [" "]
+var timeuntilnextbell = "0:0:0"
 
 let TranslatedbellTimes = [28800,31920,32160,35040,35280,38160,38400,39780,40020,41520,41760,42900,43140,44640,44880,47760,48000,50880,51120,54000,115200]
 let timer = document.getElementById("timer")
-var interval = setInterval(function() {
+var interval = setInterval(functi
     let d = new Date
     let s = d.getSeconds()
     let m = d.getMinutes()
@@ -20,7 +22,8 @@ var interval = setInterval(function() {
     let h_1 = difference/86400
     let m_2 = difference/3600
     let s_3 = difference/60
-    timer.innerText = (("0" + (Math.floor((h_1%1)*24))).slice(-2)+":"+("0" + Math.floor((m_2%1)*60)).slice(-2)+":"+("0" + Math.floor((s_3%1)*60)).slice(-2))
+    timeuntilnextbell = (("0" + (Math.floor((h_1%1)*24))).slice(-2)+":"+("0" + Math.floor((m_2%1)*60)).slice(-2)+":"+("0" + Math.floor((s_3%1)*60)).slice(-2))
+    timer.innerText = timeuntilnextbell
 }, 500);
 
 function appendData(textfromai) {
@@ -49,7 +52,7 @@ document.getElementById("text-input").addEventListener("keydown", function(event
             body: JSON.stringify({
                 contents: [{
                 parts: [{
-                    text: (instructions+"lastResponse='"+prevresponsetable[0]+"';"+instructions2+inputtext)+"';"
+                    text: (instructions+timeuntilnextbell+instructions1+"lastResponse='"+prevresponsetable[0]+"';"+instructions2+inputtext)+"';"
                 }]
                 }]
             })
