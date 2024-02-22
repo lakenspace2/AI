@@ -1,7 +1,6 @@
 const API_KEY = "AIzaSyAVPuNzgLBCXxWphoNQlRMjjErFDYyhA8o";
 var instructions = "instructions='Act like you are an AI for WMC (Western Michigan Christian).';backgroundinfo='Laken is a guy who coded and trained you. WMC is located in Muskegon, MI.';"
 var prevresponsetable = [" "]
-var timeuntilnextbell = "0:0:0"
 
 let TranslatedbellTimes = [28800,31920,32160,35040,35280,38160,38400,39780,40020,41520,41760,42900,43140,44640,44880,47760,48000,50880,51120,54000,115200]
 let timer = document.getElementById("timer")
