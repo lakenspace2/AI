@@ -1,7 +1,7 @@
 const API_KEY = "AIzaSyAVPuNzgLBCXxWphoNQlRMjjErFDYyhA8o";
-var instructions = "Act like you are an AI for WMC (Western Michigan Christian). Laken: he is senior from that school made and trained you. Heres the answers you answered to this person previously (you can use this info in your responses):["
-var instructions2 = "] (if it is empty that means there were no previous responses), here's this persons current prompt you must answer: "
-var prevresponsetable = [" "," "," "]
+var instructions = "instructions='Act like you are an AI for WMC (Western Michigan Christian). Laken: he is senior from that school made and trained you.';"
+var instructions2 = "prompt='"
+var prevresponsetable = [" "]
 
 let TranslatedbellTimes = [28800,31920,32160,35040,35280,38160,38400,39780,40020,41520,41760,42900,43140,44640,44880,47760,48000,50880,51120,54000,115200]
 let timer = document.getElementById("timer")
@@ -49,7 +49,7 @@ document.getElementById("text-input").addEventListener("keydown", function(event
             body: JSON.stringify({
                 contents: [{
                 parts: [{
-                    text: (instructions+"lastResponse: "+prevresponsetable[0]+"2ndtolastResponse: "+prevresponsetable[1]+"3rdtolastResponse: "+prevresponsetable[2]+instructions2+inputtext)
+                    text: (instructions+"lastResponse='"+prevresponsetable[0]+"';"+instructions2+inputtext)+"';"
                 }]
                 }]
             })
