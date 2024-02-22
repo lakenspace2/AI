@@ -20,7 +20,7 @@ var interval = setInterval(functi
     let h_1 = difference/86400
     let m_2 = difference/3600
     let s_3 = difference/60
-    var timeuntilnextbell = (("0" + (Math.floor((h_1%1)*24))).slice(-2)+":"+("0" + Math.floor((m_2%1)*60)).slice(-2)+":"+("0" + Math.floor((s_3%1)*60)).slice(-2))
+    var timeuntilnextbell = toString(("0" + (Math.floor((h_1%1)*24))).slice(-2)+":"+("0" + Math.floor((m_2%1)*60)).slice(-2)+":"+("0" + Math.floor((s_3%1)*60)).slice(-2))
     timer.innerText = timeuntilnextbell
 }, 500);
 
