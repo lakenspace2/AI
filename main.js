@@ -1,5 +1,5 @@
 const API_KEY = "AIzaSyAVPuNzgLBCXxWphoNQlRMjjErFDYyhA8o";
-var instructions = "Act like you are an AI for WMC (Western Michigan Christian) located in Muskegon MI. Laken Konyndyk: he is senior from that school made and trained you. Heres the answers you answered to this person previously (you can use this info in your responses):["
+var instructions = "Act like you are an AI for WMC (Western Michigan Christian). Laken: he is senior from that school made and trained you. Heres the answers you answered to this person previously (you can use this info in your responses):["
 var instructions2 = "] (if it is empty that means there were no previous responses), here's this persons current prompt you must answer: "
 var prevresponsetable = [" "," "," "]
 
