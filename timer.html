@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <title>WMC Games</title>
+        <link rel="icon" type="image/x-icon" href="images/112240.png">
+        <style>
+            @font-face {
+                font-family: "Homestead-Regular";
+                src: url(fonts/Homestead-Regular.ttf);
+            }
+            body {
+                font-family: 'Montserrat', sans-serif;
+            }
+            .WMCfont {
+                font-family: 'Homestead-Regular', sans-serif;
+                user-select: none;
+            }
+        </style>
+    </head>
+    <body style="margin: 0; padding: 0; background-color: #173622;">
+        <div style="white-space: nowrap; height: 40px; width: 100%; background-color: #235937; box-shadow: 0 0 10px #235937; position: relative; z-index: 999; display: flex;">
+            <a href="./" style="width: 320px;">
+                <button style="height: 100%; width: 320px; background-color: transparent; border-style: none;">
+                    <img src="images/back.png" align="left" style="height: 40px; opacity: .4;">
+                    <img src="images/wmc_white.png" align="left" style="height: 40px;">
+                    <a class="WMCfont" style="font-size: 100%; font-size: 38px; color: white;">WMC GAMES&nbsp&nbsp&nbsp</a>
+                    <a class="WMCfont" style="font-size: 15px; color: white;">Next Bell Rings In:</a>
+                </button>
+            </a>
+        </div>
+        <div style="text-align: center; position:fixed; top:80px; left:0; bottom:0; right:0; width:100%; border:none; margin:0; padding:0; overflow:hidden;">
+            <a id="timer" class="WMCfont" style="font-size: 25vw; color: white;">00:00:00</a>
+        </div>
+        <script src="main.js"></script>
+    </body>
+</html>
